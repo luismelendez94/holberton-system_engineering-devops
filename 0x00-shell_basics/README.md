@@ -1,3 +1,2 @@
-**Hello**, this is the first work,\n
+**Hello**, this is the first work,
 hope you are enyoing it.
-\n
