@@ -1,0 +1,6 @@
+$WATER | tr water 01234
+$STIR | tr stir. 01234
+
+echo $(((5#$WATER)+(5#$STIR))) > $SUM
+printf"%o" $SUM > $SUM_CONVERT
+$SUM_CONVERT | tr 01234567 belhnort
