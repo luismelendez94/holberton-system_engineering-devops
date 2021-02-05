@@ -1,1 +1,2 @@
-VimCrypt~01!)ª#'B	#N1æç·
+#!/bin/bash
+echo $(cut -b 1 | tr -d $'[:space:]')
