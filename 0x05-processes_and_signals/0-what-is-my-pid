@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
+# A simple shell script that displays its own PID
 cat /proc/sys/kernel/pid_max
