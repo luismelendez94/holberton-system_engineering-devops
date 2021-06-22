@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 # A Bash script that displays the PID, along with name and processes containing word bash
-cat /proc/sys/kernel/pid_max | pgrep -l bash
+
+pgrep -l bash

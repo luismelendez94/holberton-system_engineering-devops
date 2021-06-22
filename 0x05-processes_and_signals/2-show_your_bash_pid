@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 # A Bash script that displays lines containing bash word
 # shellcheck disable=SC2009
-ps -fC bash
+
+ps -auxf | grep 'bash'
