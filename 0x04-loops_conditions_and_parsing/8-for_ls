@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# A Bash script that displays content from current directory
+
+curDir=$(ls)
+for elem in $curDir
+do
+	echo "$elem" | cut -d '-' -f 2
+done
