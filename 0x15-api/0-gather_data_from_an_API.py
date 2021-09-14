@@ -22,6 +22,6 @@ if __name__ == "__main__":
             taskDone.append(task['title'])
 
     print("Employee {} is done with tasks({}/{}):"
-          .format(obj_resp['name'], len(obj_resp), len(obj_Todos)))
+          .format(obj_resp['name'], len(taskDone), len(obj_Todos)))
     for i in range(len(taskDone)):
         print("\t {}".format(taskDone[i]))
