@@ -7,9 +7,9 @@ import sys
 
 if __name__ == "__main__":
 
-    employees = requests.get(
-            "https://jsonplaceholder.typicode.com/users/").json()
     todosDict = {}
+    employees = requests.get(
+            "https://jsonplaceholder.typicode.com/users").json()
 
     for emp in employees:
         empID = emp['id']
