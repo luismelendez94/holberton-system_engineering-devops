@@ -21,9 +21,9 @@ if __name__ == "__main__":
 
         empTasks = []
         for task in tasks:
-            task = {"username": username, "task": task['title'],
-                    "completed": task['completed']}
-            empTasks.append(task)
+            empTask = {"username": username, "task": task['title'],
+                       "completed": task['completed']}
+            empTasks.append(empTask)
 
         todosDict[empID] = empTasks
 
