@@ -18,10 +18,10 @@ if __name__ == "__main__":
 
     taskDone = []
     for task in obj_Todos:
-        if task.get('completed'):
-            taskDone.append(task.get('title'))
+        if task['completed']:
+            taskDone.append(task['title'])
 
     print("Employee {} is done with tasks({}/{}):"
-          .format(obj_resp.get('name'), len(obj_resp), len(obj_Todos)))
+          .format(obj_resp['name'], len(obj_resp), len(obj_Todos)))
     for i in range(len(taskDone)):
         print("\t {}".format(taskDone[i]))
