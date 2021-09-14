@@ -18,13 +18,14 @@ if __name__ == "__main__":
 
     numbTask = 0
     numbTaskDone = 0
-    taskDone = ""
+    taskDone = []
     for task in obj_Todos:
         if task.get('completed'):
             numbTaskDone += 1
-            taskDone += "\t " + task.get('title') + "\n"
+            taskDone.append(task.get('title'))
         numbTask += 1
 
     print("Employee {} is done with tasks ({}/{}):"
           .format(obj_resp.get('name'), numbTaskDone, numbTask))
-    print(taskDone[:-1])
+    for i in range(len(taskDone)):
+        print("\t {}".format(taskDone[i]))
