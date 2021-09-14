@@ -16,16 +16,12 @@ if __name__ == "__main__":
     obj_resp = response.json()
     obj_Todos = resp_Todos.json()
 
-    numbTask = 0
-    numbTaskDone = 0
     taskDone = []
     for task in obj_Todos:
         if task.get('completed'):
-            numbTaskDone += 1
             taskDone.append(task.get('title'))
-        numbTask += 1
 
-    print("Employee {} is done with tasks ({}/{}):"
-          .format(obj_resp.get('name'), numbTaskDone, numbTask))
+    print("Employee {} is done with tasks({}/{}):"
+          .format(obj_resp.get('name'), len(obj_resp), len(obj_Todos)))
     for i in range(len(taskDone)):
         print("\t {}".format(taskDone[i]))
