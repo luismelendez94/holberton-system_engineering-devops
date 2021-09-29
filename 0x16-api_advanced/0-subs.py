@@ -6,8 +6,15 @@ import requests
 
 def number_of_subscribers(subreddit):
     """ Get the amount of subs """
-    response = requests.get("https://www.reddit.com/r/" + subreddit + ".json")
+    url = "https://www.reddit.com/r/" + subreddit + "/about.json"
+    headers = 'Mozilla/5.0 (X11; Linux x86_64) ' \
+              'AppleWebKit/537.36 (KHTML, like Gecko) ' \
+              'Chrome/80.0.3987.87 Safari/537.36'
 
-    print(response)
+    response = requests.get(url, headers=headers)
 
-    return 0
+    if response.status_code != 200:
+        return 0
+    json = response.json()
+    dictData = json.get('data')
+    return dictData.get('subscribers')
