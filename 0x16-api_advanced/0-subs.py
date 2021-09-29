@@ -11,7 +11,8 @@ def number_of_subscribers(subreddit):
               'AppleWebKit/537.36 (KHTML, like Gecko) ' \
               'Chrome/80.0.3987.87 Safari/537.36'
 
-    response = requests.get(url, allow_redirects=False, headers={'User-Agent':headers})
+    response = requests.get(url, allow_redirects=False,
+                            headers={'User-Agent': headers})
 
     if response.status_code != 200:
         return 0
